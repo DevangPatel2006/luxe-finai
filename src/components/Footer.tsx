@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Twitter } from 'lucide-react';
 
@@ -24,9 +25,30 @@ export default function Footer() {
             Join thousands of users transforming their financial future
           </p>
 
-          <Button variant="luxury" size="xl" className="mb-12 glow-cyan">
-            Join the Beta
-          </Button>
+          <Link to="/dashboard">
+            <Button variant="luxury" size="xl" className="mb-12 glow-cyan">
+              Join the Beta
+            </Button>
+          </Link>
+
+          {/* Footer Links */}
+          <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm">
+            <Link to="/help" className="text-muted-foreground hover:text-primary transition-colors">
+              Help Center
+            </Link>
+            <Link to="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors">
+              Terms of Service
+            </Link>
+            <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+              Contact Us
+            </Link>
+            <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
+              About Us
+            </Link>
+          </div>
 
           {/* Social Links */}
           <div className="flex justify-center gap-6 mb-8">

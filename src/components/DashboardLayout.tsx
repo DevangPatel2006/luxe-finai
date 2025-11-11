@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Home, Wallet, Target, Settings, TrendingUp, Plus, Menu, X } from 'lucide-react';
+import { Home, Wallet, Target, Settings, TrendingUp, Plus, Menu, X, HelpCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 
@@ -10,6 +10,7 @@ const navItems = [
   { icon: Target, label: 'Goals', path: '/goals' },
   { icon: TrendingUp, label: 'Insights', path: '/insights' },
   { icon: Settings, label: 'Settings', path: '/settings' },
+  { icon: HelpCircle, label: 'Help', path: '/help' },
 ];
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
